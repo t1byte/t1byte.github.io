@@ -221,11 +221,6 @@
 						<img class="access-section-icon" src="https://cdn.biihappy.com/ziiweb/images/static/common/wishes.png" alt="access-btn"> Gửi lời chúc
     				</span>
     			</a>
-                        <a href="https://holily.iwedding.info/rsvp" target="_blank" class="accessibility-btn album btn section-button">
-        			<span class="content-button">
-            			<img class="access-section-icon" src="https://cdn.biihappy.com/ziiweb/images/static/common/rsvp4.png" alt="access-btn"> Xác nhận tham dự
-            		</span>
-        		</a>
                         <a href="javascript:void(0)" class="accessibility-btn album btn section-button buttonDonate">
         			<span class="content-button">
                         <img class="access-section-icon" src="https://cdn.biihappy.com/ziiweb/images/static/common/money_bag.png" alt="access-btn"> Mừng cưới
@@ -1265,15 +1260,15 @@
                 <div class="donate-box">
                     <div class="donate-card">
                         <h3>Mừng cưới đến chú rể</h3>
-                        <img class="qr-code-image" src="./assets/images/qr.jpg">
-                        <p>Ngân hàng: <strong>Techcombank</strong></p>
+                        <img class="qr-code-image" src="./assets/images/vp.jpg">
+                        <p>Ngân hàng: <strong>VP Bank</strong></p>
                         <p>Tên tài khoản: <strong>Nguyễn Hữu Tường</strong></p>
                         <p>Số tài khoản: <strong>8386888896</strong></p>
 
                     </div>
                     <div class="donate-card">
                         <h3>Mừng cưới đến cô dâu</h3>
-                        <img class="qr-code-image" src="./assets/images/qr.jpg">
+                        <img class="qr-code-image" src="./assets/images/vietin.jpg">
                         <p>Ngân hàng: <strong>VietinBank</strong></p>
                         <p>Tên tài khoản: <strong>Nguyễn Hà Nhung</strong></p>
                         <p>Số tài khoản: <strong>108881297321</strong></p>
@@ -1301,15 +1296,6 @@
                 <span class="content-button tooltipBtn">
                     <span class="tooltiptext">Gửi lời chúc</span>
                     <img class="access-icon" src="https://cdn.biihappy.com/ziiweb/images/static/common/wishes.png" alt="">
-                </span>
-            </a>
-            </li>
-
-            <li class="text-center">
-                <a href="https://holily.iwedding.info/rsvp" target="_blank" class="text-white">
-                <span class="content-button tooltipBtn">
-                    <span class="tooltiptext">Xác nhận tham dự</span>
-                    <img class="access-icon" src="https://cdn.biihappy.com/ziiweb/images/static/common/rsvp4.png" alt="">
                 </span>
             </a>
             </li>
@@ -1350,13 +1336,15 @@
         }
         let biicore = parseJsonRecursively('{"template_id":"6174ee5134c46827c45a50e5","templatePremium":false,"themeRoot":"https:\/\/holily.iwedding.info\/templates\/template5","webroot":"https:\/\/holily.iwedding.info","coreSite":"https:\/\/biihappy.com","webToken":"695b65e41216f49da10a1d1f","isPremium":true,"bgMusic":"https:\/\/cdn.biihappy.com\/ziiweb\/wedding-musics\/BeautifulInWhite-ShaneFilan-524801.mp3","alert":"[]","effect":"{\\\u0022type\\\u0022:\\\u0022heart\\\u0022}","logo":"https:\/\/iwedding.info\/common\/imgs\/bii.png?v=20210131","url_landing_page":"https:\/\/biihappy.com\/iwedding","isAutoPlay":true,"footer_title":"iWedding | N\u1ec1n t\u1ea3ng t\u1ea1o website \u0111\u00e1m c\u01b0\u1edbi mi\u1ec5n ph\u00ed t\u1eeb Biihappy","footer_title_mobile":"T\u1ea1o website \u0111\u00e1m c\u01b0\u1edbi mi\u1ec5n ph\u00ed","enable_editor":false,"dataGroupAttr":[]}');
     </script>
-    <script src="https://holily.iwedding.info/templates/template5/js/jquery-plugin-collection.js?v=20251121"></script>
-    <script src="https://holily.iwedding.info/templates/template5/js/script.js?v=20251121"></script>
-    <script src="https://holily.iwedding.info/common/calendar.js?v=20251121"></script>
-    <script src="https://holily.iwedding.info/common/biicommon.min.js?v=20251121"></script>
-    <script src="https://holily.iwedding.info/common/emoji-picker/js/insertTextAtCursor.js?v=20251121"></script>
-    <script type="module" src="https://holily.iwedding.info/common/emoji-picker/js/init.js?v=20251121"></script>
-    <script src="https://holily.iwedding.info/common/toastr/toastr.min.js?v=20251121"></script>
+
+    <!-- Override -->
+    <script src="./templates/template5/js/jquery-plugin-collection.js?v=20251121"></script>
+    <script src="./templates/template5/js/script.js?v=20251121"></script>
+    <script src="./common/calendar.js?v=20251121"></script>
+    <script src="./common/biicommon.min.js?v=20251121"></script>
+    <script src="./common/emoji-picker/js/insertTextAtCursor.js?v=20251121"></script>
+    <script type="module" src="./common/emoji-picker/js/init.js?v=20251121"></script>
+    <script src="./common/toastr/toastr.min.js?v=20251121"></script>
     <script type="text/javascript">
         if (typeof toastMessageWishes === 'function') {
             toastMessageWishes(dataWishes, 'rsvp');
