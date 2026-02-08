@@ -3005,7 +3005,7 @@ button:focus {
         padding: 50px 0 20px;
     }
     .rsvp-area {
-        padding: 50px 0 44px;
+        /* padding: 50px 0 44px; */
     }
     /*Footer*/
     .footer-widget.footer-gallery ul li figure img {
@@ -3344,7 +3344,7 @@ button:focus {
         padding: 50px 0 20px;
     }
     .rsvp-area {
-        padding: 50px 0 44px;
+        /* padding: 50px 0 44px; */
     }
     .our-best-friends-area {
         padding: 50px 0 0;
@@ -3838,7 +3838,7 @@ button:focus {
         margin-bottom: 25px !important;
     }
     .rsvp-area.rsvp-page-area {
-        padding: 50px 0 44px;
+        /* padding: 50px 0 44px; */
     }
     .footer-upper-area {
         padding: 52px 0 56px;
