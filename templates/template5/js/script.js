@@ -182,36 +182,64 @@
             },
             submitHandler: function(form) {
                 $("#loader").css("display", "inline-block");
-                $.ajax({
-                    type: "POST",
-                    url: "/wish",
-                    data: $(form).serialize(),
-                    success: function(res) {
-                        $("#loader").hide();
-                        if (!res.error) {
-                            $('.wish-box').scrollTop(0);
-                            $('.wish-box').prepend('<div class="wish-box-item bg"><strong>' + $(form).find("input[name='name']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</strong><p>' + $(form).find("textarea[name='content']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</p></div>');
-                            $("#success").html(res.message).slideDown("slow");
-                            setTimeout(function() {
-                                $("#success").slideUp("slow");
-                            }, 5000);
-                        } else {
-                            $("#error").html(res.message).slideDown("slow");
-                            setTimeout(function() {
-                                $("#error").slideUp("slow");
-                            }, 5000);
-                        }
-
-                        form.reset();
-                    },
-                    error: function() {
-                        $("#loader").hide();
-                        $("#error").slideDown("slow");
-                        setTimeout(function() {
-                            $("#error").slideUp("slow");
-                        }, 5000);
+                const data = Object.fromEntries(
+                    new URLSearchParams($(form).serialize())
+                );
+                fetch("https://script.google.com/macros/s/AKfycbw5emDW63o0gyAFCwKqoNoysNiySwR-XpCyYKIU9uGPFIBOqdibRfhz2E5-528u9CzO/exec", {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {
+                    "Content-Type": "application/json"
                     }
+                })
+                .then(res => res.json())
+                .then(() => {
+                    $('.wish-box').scrollTop(0);
+                    $('.wish-box').prepend('<div class="wish-box-item bg"><strong>' + $(form).find("input[name='name']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</strong><p>' + $(form).find("textarea[name='content']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</p></div>');
+                    $("#success").html(res.message).slideDown("slow");
+                    setTimeout(function() {
+                        $("#success").slideUp("slow");
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(() => {
+                    $("#loader").hide();
+                    $("#error").slideDown("slow");
+                    setTimeout(function() {
+                        $("#error").slideUp("slow");
+                    }, 5000);
                 });
+                
+                // $.ajax({
+                //     type: "POST",
+                //     url: "/wish",
+                //     data: $(form).serialize(),
+                //     success: function(res) {
+                //         $("#loader").hide();
+                //         if (!res.error) {
+                //             $('.wish-box').scrollTop(0);
+                //             $('.wish-box').prepend('<div class="wish-box-item bg"><strong>' + $(form).find("input[name='name']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</strong><p>' + $(form).find("textarea[name='content']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</p></div>');
+                //             $("#success").html(res.message).slideDown("slow");
+                //             setTimeout(function() {
+                //                 $("#success").slideUp("slow");
+                //             }, 5000);
+                //         } else {
+                //             $("#error").html(res.message).slideDown("slow");
+                //             setTimeout(function() {
+                //                 $("#error").slideUp("slow");
+                //             }, 5000);
+                //         }
+
+                //         form.reset();
+                //     },
+                //     error: function() {
+                //         $("#loader").hide();
+                //         $("#error").slideDown("slow");
+                //         setTimeout(function() {
+                //             $("#error").slideUp("slow");
+                //         }, 5000);
+                //     }
+                // });
                 return false;
             }
 
