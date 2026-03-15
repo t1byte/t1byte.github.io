@@ -129,9 +129,9 @@
                 together.setMinutes(0);
                 together.setSeconds(0);
                 together.setMilliseconds(0);
-                setInterval(function() {
+                // setInterval(function() {
                     timeElapse(together);
-                }, 1000);
+                // }, 1000);
             } else {
                 var $this = $(this).html(event.strftime('' +
                     ' <div class="event-count-box"><div class="dash days_dash"><div class="digit">%D</div></div> <span class="dash_title d-block text-center text-capitalize color-pink">' + $('#clock').data('text-day') + '</span> </div>' +
@@ -371,12 +371,6 @@
         $('.btn-menu-close').show();
         $('ul.list-menu-icon').css('opacity', '1');
     }, 3000);
-    $(window).on("load", function() {
-        if ($('.bii-logo').length > 0) {
-            $('#menu-access').css('bottom', '278px');
-            document.querySelector('style').textContent += "@media (max-width: 799px){#menu-access{bottom: 238px!important;}}"
-        }
-    })
 
     function shakeTooltip() {
         var arrTooltip = $('ul.list-menu-icon').children();
@@ -395,16 +389,6 @@
             }, index * 5000);
         });
     }
-    if ($('#menu-access').length > 0) {
-        setTimeout(() => {
-            shakeTooltip();
-            myInterval = setInterval(shakeTooltip, 20000);
-        }, 3000);
-    }
-    $('.btn-menu-close').click(function() {
-        $('tooltiptext').css('visibility', '');
-        clearInterval(myInterval);
-    });
 
     // ALBUM GALLERIES
     $(document).on('click', '.btn-see-more-gallery', function(e) {

@@ -54,7 +54,7 @@
 -------------------------------------------------*/
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -827,7 +827,7 @@ button:focus {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 80px 0;
+    padding: 0 !important;
 }
 
 .zoom-burns-background {
@@ -883,6 +883,8 @@ button:focus {
     flex-direction: column;
     justify-content: space-evenly;
     min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 120px;
 }
 
 .header-content {
@@ -932,6 +934,7 @@ button:focus {
     border-radius: 55px;
     font-size: 40px;
     line-height: 35px;
+    /* background-image: url('../../../assets/images/heart.png') center 40% / 270% no-repeat; */
 }
 
 @media (max-width: 1440px) {
@@ -4015,7 +4018,7 @@ a.text-logo h1 {
 
 #clock {
     text-align: center;
-    margin-top: 112px;
+    /* margin-top: 112px; */
 }
 
 .header-content-float-img {
@@ -4946,4 +4949,8 @@ a.text-logo h1 {
     .toast-top-right {
         top: 62px !important;
     }
+}
+
+.bride-groom-area {
+    padding-bottom: 0 !important;
 }
