@@ -874,6 +874,9 @@ button:focus {
     font-size: 45px;
     line-height: 53px;
     padding: 7px 0 3px;
+    span {
+        font-size: 28px;
+    }
 }
 
 .header-caption {
@@ -3148,7 +3151,7 @@ button:focus {
     }
     .dash {
         color: #fff;
-        background-color: #ff4061;
+        /* background-color: #ff4061; */
     }
     /*Friends Area*/
     .friend-p-wrap img {
@@ -3868,9 +3871,22 @@ button:focus {
     }
 }
 
+@media only screen and (min-width:300px) and (max-width:390px) {
+    .header-caption-heading {
+        font-size: 36px;
+        line-height: 44px;
+        span {
+            font-size: 24px;
+        }
+    }
+}
+
 @media only screen and (max-width:320px) {
     .header-caption-heading {
         font-size: 35px;
+        span {
+            font-size: 23px;
+        }
     }
 }
 
