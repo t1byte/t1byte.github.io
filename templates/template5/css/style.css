@@ -4954,3 +4954,18 @@ a.text-logo h1 {
 .bride-groom-area {
     padding-bottom: 0 !important;
 }
+
+img, .div-has-bg {
+  opacity:0;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+}
+
+img.show, .div-has-bg.show{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.lg-thumb-outer img {
+    opacity: 1;
+}
