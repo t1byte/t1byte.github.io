@@ -421,7 +421,7 @@ h2.section-heading,
 .footer-widget.footer-gallery ul li a figure::after,
 .widget-recent-posts ul li a figure::after,
 .widget-instagram ul li a figure::after {
-    background-color: rgba(255, 64, 97, .7);
+    background-color: rgba(255, 64, 97, .1);
 }
 
 /*--------------------------------
@@ -1806,7 +1806,7 @@ button:focus {
 }
 
 .friends-says-area .section-overlay {
-    background-color: rgba(255, 64, 97, .80);
+    background-color: rgba(255, 64, 97, .10);
 }
 
 .single-friend-slide-box {
@@ -1933,7 +1933,7 @@ button:focus {
 }
 
 .single-partner-logo-box a figure::after {
-    background-color: rgba(255, 64, 97, .7);
+    background-color: rgba(255, 64, 97, .1);
     content: "";
     height: 100%;
     width: 100%;
