@@ -797,7 +797,7 @@ button:focus {
 .hero-content-wrap {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 40%;
+    background-position: center 25%;
 }
 
 .hero-content-wrap:before {
