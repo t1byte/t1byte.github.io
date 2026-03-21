@@ -182,6 +182,15 @@
             },
             submitHandler: function(form) {
                 $("#loader").css("display", "inline-block");
+
+                // Fake UX gửi phát thành công luôn
+                $('.wish-box').scrollTop(0);
+                $('.wish-box').prepend('<div class="wish-box-item bg"><strong>' + $(form).find("input[name='name']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</strong><p>' + $(form).find("textarea[name='content']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</p></div>');
+                $("#success").html('Cảm ơn lời chúc của bạn! ^^').slideDown("slow");
+                setTimeout(function() {
+                    $("#success").slideUp("slow");
+                }, 6000);
+                
                 $.ajax({
                     type: "POST",
                     url: "https://script.google.com/macros/s/AKfycbwwXXuo8mTusISFWgljKL3nLk1DtuLU5bi4-wKl7DQxypr3xxRKVRb-cB7prI5eAROf/exec",
@@ -189,12 +198,12 @@
                     success: function(res) {
                         $("#loader").hide();
                         if (!res.error) {
-                            $('.wish-box').scrollTop(0);
-                            $('.wish-box').prepend('<div class="wish-box-item bg"><strong>' + $(form).find("input[name='name']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</strong><p>' + $(form).find("textarea[name='content']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</p></div>');
-                            $("#success").html(res.message).slideDown("slow");
-                            setTimeout(function() {
-                                $("#success").slideUp("slow");
-                            }, 5000);
+                            // $('.wish-box').scrollTop(0);
+                            // $('.wish-box').prepend('<div class="wish-box-item bg"><strong>' + $(form).find("input[name='name']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</strong><p>' + $(form).find("textarea[name='content']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") + '</p></div>');
+                            // $("#success").html(res.message).slideDown("slow");
+                            // setTimeout(function() {
+                            //     $("#success").slideUp("slow");
+                            // }, 5000);
                         } else {
                             $("#error").html(res.message).slideDown("slow");
                             setTimeout(function() {
