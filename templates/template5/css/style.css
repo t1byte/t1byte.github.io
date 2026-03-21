@@ -459,6 +459,8 @@ h2.section-heading {
     font-family: 'Playball', cursive;
     /*font-weight: 400;*/
     /*color: #777c87;*/
+    font-family: 'SVN-Sofia', cursive;
+    font-style: italic;
 }
 
 h3.section-subheading {
@@ -4984,4 +4986,13 @@ img.show, .div-has-bg.show{
 
 .lg-thumb-outer img {
     opacity: 1;
+}
+
+.icon-plus {
+    font-size: 60px;
+    color: white !important;
+}
+
+.forever-one-love {
+    font-family: 'SVN-Sofia';
 }

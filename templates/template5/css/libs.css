@@ -17594,8 +17594,8 @@ a.text-dark:hover {
     font-style: normal;
     font-weight: 400;
     font-display: auto;
-    src: url(webfonts/fa-regular-400.eot);
-    src: url(webfonts/fa-regular-400d41d.eot?#iefix) format("embedded-opentype"), url(webfonts/fa-regular-400.woff2) format("woff2"), url(webfonts/fa-regular-400.woff) format("woff"), url(webfonts/fa-regular-400.ttf) format("truetype"), url(webfonts/fa-regular-400.svg#fontawesome) format("svg")
+    src: url(./webfonts/fa-regular-400.eot);
+    src: url(./webfonts/fa-regular-400.woff2) format("woff2")
 }
 
 .far {
@@ -17608,7 +17608,80 @@ a.text-dark:hover {
     font-weight: 900;
     font-display: auto;
     src: url(webfonts/fa-solid-900.eot);
-    src: url(webfonts/fa-solid-900d41d.eot?#iefix) format("embedded-opentype"), url(webfonts/fa-solid-900.woff2) format("woff2"), url(webfonts/fa-solid-900.woff) format("woff"), url(webfonts/fa-solid-900.ttf) format("truetype"), url(webfonts/fa-solid-900.svg#fontawesome) format("svg")
+    src: url(webfonts/fa-solid-900.woff2) format("woff2")
+}
+
+
+@font-face {
+    font-family: "SVN-Steady";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(./webfonts/SVN-Steady.otf);
+    src: url(./webfonts/SVN-Steady.otf) format("otf")
+}
+
+@font-face {
+    font-family: "SVN-Mutlu";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(./webfonts/SVN-Mutlu.ttf);
+    src: url(./webfonts/SVN-Mutlu.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: "SVN-Reliant";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(./webfonts/SVN-Reliant.ttf);
+    src: url(./webfonts/SVN-Reliant.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: "SVN-Sofia";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(./webfonts/SVN-Sofia.ttf);
+    src: url(./webfonts/SVN-Sofia.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: "SVN-Student";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(./webfonts/SVN-Student.ttf);
+    src: url(./webfonts/SVN-Student.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: "SVN-Valentina";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(./webfonts/SVN-Valentina.ttf);
+    src: url(./webfonts/SVN-Valentina.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: "SVN-Vanessas Valentine";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(./webfonts/SVN-Vanessas\ Valentine.ttf);
+    src: url(./webfonts/SVN-Vanessas\ Valentine.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: "SVN-Zebra";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(./webfonts/SVN-Zebra.ttf);
+    src: url(./webfonts/SVN-Zebra.ttf) format("ttf")
 }
 
 .fa,
@@ -17630,7 +17703,7 @@ a.text-dark:hover {
 @font-face {
     font-family: "Flaticon";
     src: url(Flaticon.eot);
-    src: url(Flaticond41d.eot?#iefix) format("embedded-opentype"), url(Flaticon.woff2) format("woff2"), url(Flaticon.woff) format("woff"), url(Flaticon.ttf) format("truetype"), url(Flaticon.svg#Flaticon) format("svg");
+    src: url(Flaticon.woff2) format("woff2");
     font-weight: 400;
     font-style: normal
 }
