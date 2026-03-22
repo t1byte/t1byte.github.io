@@ -4995,3 +4995,35 @@ img.show, .div-has-bg.show{
 .forever-one-love {
     font-family: 'SVN-Sofia';
 }
+
+.music-btn {
+  position: fixed;
+  left: 20px;   /* 👈 đổi sang trái */
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.music-btn.playing {
+  animation: spin 3s linear infinite;
+  background: #ffefe6;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}

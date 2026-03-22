@@ -31,7 +31,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/anh_cuoi/IMG_0411_square_og_img.jpg">
 </head>
 <body>
-
     <div class="fakeLoader"></div>
     <header class="home-banner-area" id="home">
         <section class="hero-area zoom-burns position-relative">
@@ -203,7 +202,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="our-gallery-area" id="gallery">
         <div class="container">
@@ -418,8 +416,14 @@
             </div>
         </div>
     </div>
-</section>
+    </section>
+    
+    <audio loop controls id="myAudio" style="display: none;">
+        <source src="./assets/mp3/le_duong.mp3" type="audio/mpeg">
+    </audio>
 
+    <!-- Nút nhạc -->
+    <div id="musicBtn" class="music-btn">♫</div>
 
     <div id="donate-modal" class="donate-modal">
         <div class="donate-modal-content">
@@ -488,14 +492,6 @@
     <script src="./templates/template5/js/script.js?v=20260330"></script>
     <script src="./common/calendar.js?v=20260330"></script>
     <script src="./common/biicommon.min.js?v=20260330"></script>
-    <!-- <script src="./common/emoji-picker/js/insertTextAtCursor.js?v=20260330"></script> -->
-    <!-- <script type="module" src="./common/emoji-picker/js/init.js?v=20260330"></script> -->
-    <!-- <script src="./common/toastr/toastr.min.js?v=20260330"></script> -->
-    <!-- <script type="text/javascript">
-        if (typeof toastMessageWishes === 'function') {
-            toastMessageWishes(dataWishes, 'rsvp');
-        }
-    </script> -->
     <script type="text/javascript">
         const elements = document.querySelectorAll('img');
         const observer = new IntersectionObserver((entries)=>{
@@ -529,6 +525,33 @@
 
         elementsDivBg.forEach(el=>{
             observerElementsDivBg.observe(el);
+        });
+
+        const audio = document.getElementById("myAudio");
+        const btn = document.getElementById("musicBtn");
+
+        // load trạng thái
+        let isPlaying = localStorage.getItem("music") === "on";
+
+        if (isPlaying) {
+            btn.classList.add("playing");
+        }
+
+        // click bật/tắt
+        btn.addEventListener("click", async () => {
+            try {
+                if (audio.paused) {
+                    await audio.play();
+                    btn.classList.add("playing");
+                    localStorage.setItem("music", "on");
+                    } else {
+                    audio.pause();
+                    btn.classList.remove("playing");
+                    localStorage.setItem("music", "off");
+                }
+            } catch (e) {
+                console.log("Bị chặn:", e);
+            }
         });
     </script>
 </body>
