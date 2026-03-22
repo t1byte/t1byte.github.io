@@ -11863,7 +11863,7 @@ function(a, b, c, d) {
                         }
                 };
             if (k.s.dynamic) {
-                if (k.s.dynamicEl[b].poster && (l = !0, g = k.s.dynamicEl[b].poster), j = k.s.dynamicEl[b].html, f = k.s.dynamicEl[b].src, k.s.dynamicEl[b].responsive) {
+                if (k.s.dynamicEl[b]?.poster && (l = !0, g = k.s.dynamicEl[b].poster), j = k.s.dynamicEl[b].html, f = k.s.dynamicEl[b].src, k.s.dynamicEl[b].responsive) {
                     m(k.s.dynamicEl[b].responsive.split(","))
                 }
                 h = k.s.dynamicEl[b].srcset, i = k.s.dynamicEl[b].sizes
