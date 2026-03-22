@@ -144,36 +144,13 @@
 
     if ($("#wish-form").length) {
         $("#wish-form").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 5
-                },
-                content: {
-                    required: true,
-                    minlength: 10
-                },
-            },
-
-            messages: {
-                name: {
-                    required: 'Vui lòng nhập tên của bạn.',
-                    minlength: 'Tên phải lớn hơn 5 ký tự.',
-                },
-                content: {
-                    required: 'Vui lòng nhập lời chúc.',
-                    minlength: 'Lời chúc phải lớn hơn 10 ký tự.',
-                },
-            },
-
-            errorPlacement: function(error, element) {
-                if (element.attr("name") == "content") {
-                    error.insertAfter("#wish-form .vitualTextarea");
-                } else {
-                    error.insertAfter(element);
-                }
-            },
             submitHandler: function(form) {
+                const params = new URLSearchParams($(form).serialize());
+
+                const name = params.get("name");
+                const content = params.get("content");
+                if (!name || !content) return;
+                
                 $("#loader").css("display", "inline-block");
 
                 // Fake UX gửi phát thành công luôn
