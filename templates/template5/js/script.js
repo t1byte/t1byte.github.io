@@ -54,12 +54,6 @@
     }
 
     smoothScrolling($(".menu-section-area a[href^='#']"), $(".menu-section-area >nav").innerHeight());
-    /*======== Preloder ===========*/
-    $.fakeLoader({
-        bgColor: '#fff',
-        spinner: "spinner1"
-    });
-
     // Shuffle js filter and masonry Start
     if ($(".shuffle-wrapper").length) {
         var Shuffle = window.Shuffle;
