@@ -18,17 +18,43 @@
     <meta name="application-name" content="iWedding">
     <meta name="author" content="Biihappy.com">
     <title>Tường &amp; Nhung - 30.03.2026</title>
-    <link href="https://holily.iwedding.info/templates/template5/css/libs.css?v=20260330" rel="stylesheet">
-    <link href="./templates/template5/css/libs.css?v=20260330" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playball&amp;display=swap" rel="stylesheet">
-    <link href="./common/calendar.css?v=20260330" rel="stylesheet">
-    <link href="./common/toastr/toastr.min.css?v=20260330" rel="stylesheet">
+    <link href="https://holily.iwedding.info/templates/template5/css/libs.css?v=20260330" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./templates/template5/css/libs.css?v=20260330" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./common/calendar.css?v=20260330" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./common/toastr/toastr.min.css?v=20260330" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="./templates/template5/css/style.css?v=20260330" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/anh_cuoi/IMG_0411_square_og_img.jpg">
+    <link rel="preload" as="image" href="./assets/images/IMG_0020%20(2).webp">
+    <style>
+      /* Critical CSS - hero section */
+      .hero-content-wrap{background-repeat:no-repeat;background-size:cover;background-position:center 25%}
+      .hero-content-wrap:before{content:"";background-color:rgba(0,0,0,0.3);width:100%;height:100%;position:absolute;left:0;top:0}
+      .hero-area.zoom-burns{overflow:hidden;height:100vh;background:0 0;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:0!important}
+      .zoom-burns-background{position:absolute;top:0;right:0;bottom:0;left:0}
+      .header-caption-heading{font-size:45px;line-height:53px;padding:7px 0 3px;font-family:'Playball',cursive;color:#ff4061}
+      .header-caption-heading span{font-size:28px}
+      .header-caption{margin:auto;width:51%;display:flex;flex-direction:column;justify-content:space-evenly;min-height:100vh;padding-top:40px;padding-bottom:120px}
+      .header-content{padding:23px 0 0 0;position:relative}
+      .header-caption p{font-size:25px;color:#101127}
+      .color-pink{color:#ff4061}
+      .color-dark,.header-caption p{color:#101127}
+      .font-playball,.header-caption-heading{font-family:'Playball',cursive}
+      .text-capitalize{text-transform:capitalize}
+      .text-center{text-align:center}
+      .text-left{text-align:left}
+      .position-relative{position:relative}
+      .container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+      @media (min-width:576px){.container{max-width:540px}}
+      @media (min-width:768px){.container{max-width:720px}}
+      @media (min-width:992px){.container{max-width:960px}}
+      @media (min-width:1200px){.container{max-width:1140px}}
+      body{margin:0;padding:0;overflow-x:hidden}
+    </style>
 </head>
 <body>
     <div class="fakeLoader"></div>
@@ -418,10 +444,6 @@
     </div>
     </section>
     
-    <audio loop controls id="myAudio" style="display: none;">
-        <source src="./assets/mp3/le_duong.mp3" type="audio/mpeg">
-    </audio>
-
     <!-- Nút nhạc -->
     <div id="musicBtn" class="music-btn">♫</div>
 
@@ -488,63 +510,38 @@
     </script>
 
     <!-- Override -->
-    <script src="./templates/template5/js/jquery-plugin-collection.js?v=20260330"></script>
-    <script src="./templates/template5/js/script.js?v=20260330"></script>
-    <script src="./common/calendar.js?v=20260330"></script>
-    <script src="./common/biicommon.min.js?v=20260330"></script>
+    <script src="./templates/template5/js/jquery-plugin-collection.js?v=20260330" defer></script>
+    <script src="./templates/template5/js/script.js?v=20260330" defer></script>
+    <script src="./common/calendar.js?v=20260330" defer></script>
+    <script src="./common/biicommon.min.js?v=20260330" defer></script>
     <script type="text/javascript">
-        const elements = document.querySelectorAll('img');
-        const observer = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show'); // scroll ngược sẽ animate lại
-            }
-        });
-        },{
-            threshold:0.2
-        });
-
-        elements.forEach(el=>{
-            observer.observe(el);
-        });
-
-        const elementsDivBg = document.querySelectorAll('.div-has-bg');
-        const observerElementsDivBg = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show'); // scroll ngược sẽ animate lại
-            }
-        });
-        },{
-            threshold:0.2
-        });
-
-        elementsDivBg.forEach(el=>{
-            observerElementsDivBg.observe(el);
-        });
-
-        const audio = document.getElementById("myAudio");
-        const btn = document.getElementById("musicBtn");
-
-        // load trạng thái
-        let isPlaying = localStorage.getItem("music") === "on";
-
-        if (isPlaying) {
-            btn.classList.add("playing");
+        if ("IntersectionObserver" in window) {
+            const obs = new IntersectionObserver((entries)=>{
+                entries.forEach(entry=>{
+                    entry.target.classList.toggle('show', entry.isIntersecting);
+                });
+            }, { threshold: 0.2, rootMargin: '200px 0px' });
+            document.querySelectorAll('img, .div-has-bg').forEach(el => obs.observe(el));
+        } else {
+            document.querySelectorAll('img, .div-has-bg').forEach(el => el.classList.add('show'));
         }
+
+        const btn = document.getElementById("musicBtn");
+        let audio = null;
 
         // click bật/tắt
         btn.addEventListener("click", async () => {
             try {
+                if (!audio) {
+                    audio = new Audio();
+                    audio.loop = true;
+                    audio.src = "./assets/mp3/le_duong.mp3";
+                }
                 if (audio.paused) {
                     await audio.play();
                     btn.classList.add("playing");
                     localStorage.setItem("music", "on");
-                    } else {
+                } else {
                     audio.pause();
                     btn.classList.remove("playing");
                     localStorage.setItem("music", "off");
