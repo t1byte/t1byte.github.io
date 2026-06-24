@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Free Wedding Website Template — Beautiful & Customizable" description="Free, responsive wedding website HTML template with gallery, countdown, RSVP, and music. Easy to customize and host on GitHub Pages.">
+  <style>
+    .hero{background:linear-gradient(135deg,#2d1b2e,#4a2c4a);padding:100px 20px;text-align:center;color:#fff}
+    .hero h1{font-family:'Playfair Display',serif;font-size:3em;max-width:750px;margin:0 auto 16px}
+    .hero p{font-size:1.15em;opacity:.85;max-width:600px;margin:0 auto 30px}
+    .hero .btn{display:inline-block;background:#ff4061;color:#fff;padding:14px 36px;border-radius:30px;text-decoration:none;font-weight:600;font-size:1.05em;margin:0 8px 12px}
+    .hero .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;padding:12px 34px;border-radius:30px;text-decoration:none;font-weight:600;font-size:1.05em;margin:0 8px 12px}
+    .hero .btn-outline:hover{border-color:#ff4061;background:rgba(255,64,97,.1)}
+    .section{padding:70px 20px;max-width:1100px;margin:0 auto;text-align:center}
+    .section h2{font-family:'Playfair Display',serif;font-size:2em;color:#2d1b2e;margin-bottom:12px}
+    .section p{color:#666;max-width:700px;margin:0 auto 40px;font-size:1.05em}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;text-align:left;margin-top:20px}
+    .feature{background:#fff;border-radius:12px;padding:25px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+    .feature h3{font-family:'Playfair Display',serif;color:#2d1b2e;margin-bottom:8px;font-size:1.15em}
+    .feature p{font-size:.92em;margin:0}
+    .demo-preview{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.1);margin:40px auto;max-width:900px}
+    .demo-preview img{width:100%;display:block}
+    .cta{padding:60px 20px;text-align:center;background:#fff}
+    .cta h2{font-family:'Playfair Display',serif;color:#2d1b2e;margin-bottom:12px}
+    .cta .btn{display:inline-block;background:#ff4061;color:#fff;padding:14px 36px;border-radius:30px;text-decoration:none;font-weight:600;font-size:1.05em}
+    @media(max-width:600px){
+      .hero{padding:60px 15px}
+      .hero h1{font-size:2em}
+      .section{padding:40px 15px}
+    }
+  </style>
+
+  <section class="hero">
+    <h1>The Perfect Free Wedding Website Template</h1>
+    <p>Beautiful, responsive, and ready in minutes. Create your dream wedding website with zero coding.</p>
+    <a class="btn" href="/demo/">View Live Demo</a>
+    <a class="btn-outline" href="https://github.com/t1byte/t1byte.github.io" target="_blank" rel="noopener">Download on GitHub</a>
+  </section>
+
+  <section class="section">
+    <h2>Everything You Need</h2>
+    <p>From countdown to gallery, RSVP to music — this template has all the features couples love.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>⏱️ Live Countdown</h3>
+        <p>Automatic countdown to your wedding day. Updates in real-time.</p>
+      </div>
+      <div class="feature">
+        <h3>🖼️ Image Gallery</h3>
+        <p>Filterable gallery with Shuffle.js. Showcase your engagement photos beautifully.</p>
+      </div>
+      <div class="feature">
+        <h3>💌 RSVP Form</h3>
+        <p>Built-in form for guests to confirm attendance. Easy to customize.</p>
+      </div>
+      <div class="feature">
+        <h3>🎵 Background Music</h3>
+        <p>Lazy-loaded audio player. Guests can play/pause your wedding song.</p>
+      </div>
+      <div class="feature">
+        <h3>📱 Fully Responsive</h3>
+        <p>Looks perfect on mobile, tablet, and desktop. Bootstrap 4 powered.</p>
+      </div>
+      <div class="feature">
+        <h3>🚀 Lighthouse 95+</h3>
+        <p>Optimized for performance. Fast loading, accessible, SEO-friendly.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="demo-preview">
+    <a href="/demo/">
+      <img src="/demo/assets/images/IMG_0020%20(2).webp" alt="Wedding Template Demo" loading="lazy" style="aspect-ratio:1600/1067;object-fit:cover">
+    </a>
+  </div>
+
+  <section class="cta">
+    <h2>Ready to Create Your Wedding Website?</h2>
+    <p style="color:#666;margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto">It's free, open-source, and takes just minutes to set up.</p>
+    <a class="btn" href="https://github.com/t1byte/t1byte.github.io" target="_blank" rel="noopener">Get Started on GitHub →</a>
+  </section>
+</BaseLayout>
