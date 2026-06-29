@@ -18,14 +18,13 @@ A beautiful, responsive wedding website HTML template. Free and open source.
 
 ## Quick Start
 
-1. **Fork** this repository
-2. **Enable GitHub Pages**: Settings → Pages → deploy from `main`
-3. **Customize**:
+1. **Download** the template
+2. **Customize**:
    - Edit `index.html` — change names, date, venue, photos
    - Replace images in `assets/images/`
    - Edit `assets/mp3/` for background music
-4. **Update CNAME** with your domain (optional)
-5. Done! Your wedding website is live at `https://yourusername.github.io`
+3. **Deploy** to any static hosting (Cloudflare Pages, Netlify, Vercel, etc.)
+4. Done! Your wedding website is live.
 
 ## Customization Guide
 

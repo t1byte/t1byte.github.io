@@ -1,6 +1,6 @@
 ---
 title: 'How to Create a Free Wedding Website (No Coding Required)'
-description: 'Learn how to create a beautiful wedding website for free using our open-source HTML template. Easy to customize, host on GitHub Pages, and share with guests.'
+description: 'Learn how to create a beautiful wedding website for free using our open-source HTML template. Easy to customize and share with guests.'
 date: 2026-06-24
 category: Website
 readTime: '5 min'
@@ -21,7 +21,7 @@ A wedding website is your digital hub for everything guests need to know:
 
 ## Introducing Our Free Template
 
-Our [open-source wedding website template](https://github.com/t1byte/t1byte.github.io) includes everything you need:
+Our open-source wedding website template includes everything you need:
 
 - **Hero section** with countdown timer
 - **Couple bio** with photos
@@ -37,7 +37,7 @@ Our [open-source wedding website template](https://github.com/t1byte/t1byte.gith
 
 ### Step 1: Get the Template
 
-Fork or download the repo from [GitHub](https://github.com/t1byte/t1byte.github.io).
+Download the template from our website.
 
 ### Step 2: Customize
 
@@ -50,9 +50,9 @@ Edit `index.html` to change:
 ### Step 3: Deploy
 
 Upload to any static host:
-- **GitHub Pages** (free)
+- **Cloudflare Pages** or **Netlify** (free tier)
+- **Vercel** (free tier)
 - **Hostinger** or any shared hosting
-- **Netlify** or **Vercel** (free tier)
 
 ### Step 4: Share
 
@@ -68,6 +68,6 @@ Send your guests the link — done!
 
 ---
 
-[View the live demo](/demo/) or [download the template on GitHub](https://github.com/t1byte/t1byte.github.io).
+[View the live demo](/demo/) and start building your wedding website today.
 
 *Some links on this site are affiliate links. We may earn a commission at no extra cost to you.*

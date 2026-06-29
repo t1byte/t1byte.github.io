@@ -83,4 +83,4 @@ Planning a wedding is one of the most exciting — and overwhelming — things y
 
 ### Plan Your Dream Wedding
 
-Create your own beautiful wedding website in minutes — [free, no coding required](/demo/). Or [get the open-source template on GitHub](https://github.com/t1byte/t1byte.github.io).
+Create your own beautiful wedding website in minutes — [free, no coding required](/demo/).
