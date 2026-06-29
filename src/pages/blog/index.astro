@@ -46,37 +46,37 @@ posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   </style>
 
   <header class="hero">
-    <h1>Wedding Planning Blog</h1>
-    <p>Free tips, checklists & inspiration for your perfect day</p>
+    <h1 data-i18n="langBlogHeroTitle">Wedding Planning Blog</h1>
+    <p data-i18n="langBlogHeroDesc">Free tips, checklists & inspiration for your perfect day</p>
   </header>
 
   <div class="layout">
     <main class="main">
       <div class="breadcrumb">
-        <a href="/">Home</a> <span style="margin:0 6px">›</span>
-        <span style="color:#555">Blog</span>
+        <a href="/" data-i18n="langBreadcrumbHome">Home</a> <span style="margin:0 6px">›</span>
+        <span style="color:#555" data-i18n="langBreadcrumbBlog">Blog</span>
       </div>
 
       {posts.map((post) => (
         <article class="post">
           <span class="cat">{post.data.category}</span>
           <h2><a href={'/blog/' + post.slug + '/'}>{post.data.title}</a></h2>
-          <div class="meta">{post.data.date.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })} · {post.data.readTime} read</div>
+          <div class="meta">{post.data.date.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })} · {post.data.readTime} <span data-i18n="langReadTime">read</span></div>
           <p>{post.data.description}</p>
-          <a class="read-more" href={'/blog/' + post.slug + '/'}>Read More →</a>
+          <a class="read-more" href={'/blog/' + post.slug + '/'} data-i18n="langReadMore">Read More →</a>
         </article>
       ))}
     </main>
 
     <aside class="sidebar">
       <div class="sidebar-widget">
-        <h3>💍 Free Template</h3>
-        <p>Create your own wedding website with our beautiful, free template.</p>
-        <a class="btn" href="/demo/">View Demo →</a>
+        <h3 data-i18n="langSidebarTemplateTitle">💍 Free Template</h3>
+        <p data-i18n="langSidebarTemplateDesc">Create your own wedding website with our beautiful, free template.</p>
+        <a class="btn" href="/demo/" data-i18n="langSidebarTemplateBtn">View Demo →</a>
       </div>
 
       <div class="sidebar-widget">
-        <h3>📂 Categories</h3>
+        <h3 data-i18n="langSidebarCategories">📂 Categories</h3>
         <ul>
           <li><a href="/blog/">Planning (1)</a></li>
           <li><a href="/blog/">Website & Tech (1)</a></li>
@@ -84,7 +84,7 @@ posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
       </div>
 
       <div class="sidebar-widget">
-        <h3>📝 Recent Posts</h3>
+        <h3 data-i18n="langSidebarRecentPosts">📝 Recent Posts</h3>
         <ul>
           {posts.slice(0, 5).map((post) => (
             <li><a href={'/blog/' + post.slug + '/'}>{post.data.title}</a></li>

@@ -60,28 +60,28 @@ const { Content } = await post.render();
     <header class="article-header">
       <span class="cat">{post.data.category}</span>
       <h1>{post.data.title}</h1>
-      <p class="meta">{post.data.date.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })} · {post.data.readTime} read</p>
+      <p class="meta">{post.data.date.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })} · {post.data.readTime} <span data-i18n="langReadTime">read</span></p>
     </header>
     <div class="layout">
       <main class="main content">
         <div class="breadcrumb">
-          <a href="/">Home</a> <span style="margin:0 6px">›</span>
-          <a href="/blog/">Blog</a> <span style="margin:0 6px">›</span>
+          <a href="/" data-i18n="langBreadcrumbHome">Home</a> <span style="margin:0 6px">›</span>
+          <a href="/blog/" data-i18n="langBreadcrumbBlog">Blog</a> <span style="margin:0 6px">›</span>
           <span style="color:#555">{post.data.title}</span>
         </div>
         <Content />
         <div class="nav-links-section">
-          <a href="/blog/">← Back to Blog</a>
+          <a href="/blog/" data-i18n="langBackToBlog">← Back to Blog</a>
         </div>
       </main>
       <aside class="sidebar">
         <div class="sidebar-widget">
-          <h3>💍 Free Template</h3>
-          <p>Create your own wedding website with our beautiful, free template.</p>
-          <a class="btn" href="/demo/">View Demo →</a>
+          <h3 data-i18n="langSidebarTemplateTitle">💍 Free Template</h3>
+          <p data-i18n="langSidebarTemplateDesc">Create your own wedding website with our beautiful, free template.</p>
+          <a class="btn" href="/demo/" data-i18n="langSidebarTemplateBtn">View Demo →</a>
         </div>
         <div class="sidebar-widget">
-          <h3>📂 Categories</h3>
+          <h3 data-i18n="langSidebarCategories">📂 Categories</h3>
           <ul>
             <li><a href="/blog/">Planning (1)</a></li>
             <li><a href="/blog/">Website & Tech (1)</a></li>
@@ -93,7 +93,7 @@ const { Content } = await post.render();
             <li><a href="https://amzn.to/4fV2R3X" target="_blank" rel="nofollow sponsored">Photo Booth Rental →</a></li>
             <li><a href="https://amzn.to/3ZYXabc" target="_blank" rel="nofollow sponsored">Portable Bluetooth Speaker →</a></li>
           </ul>
-          <div style="margin-top:10px;font-size:.78em;color:#aaa">As an Amazon Associate we earn from qualifying purchases.</div>
+          <div style="margin-top:10px;font-size:.78em;color:#aaa" data-i18n="langAmazonDisclaimer">As an Amazon Associate we earn from qualifying purchases.</div>
         </div>
       </aside>
     </div>
